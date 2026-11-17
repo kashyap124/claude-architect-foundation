@@ -1,0 +1,16 @@
+- Chatbot responds but agent acts
+
+Step 1: Chatbit only answers
+Customer asks store app about return policy, claude writes the answers then respond. If return policy of compny is added to the request the answer gets better.
+
+Step 2: Claude asks for a tool
+Customer asks where is my order to Store app. it sends to claude. Claude responded tool_use: order_lookup to the app. App called the tool, and send the response back to Claude. Then Claude gives the answer
+
+Step 3: The loop(One call is not enough here)
+"My order arrived damaged, I want a refund." - In this case Claude has to loop back again to the app to access different tools.
+
+# Giving model an instruction and context is the chatbot. Adding tools and a loop makes an agent. 
+
+WHO DECIDES?
+
+An agent does not gives models unlimited freedom. Claude proposes the next step then your application(code) decides and execute.
